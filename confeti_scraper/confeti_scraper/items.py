@@ -6,11 +6,11 @@
 import scrapy
 
 class ConferenceInfo(scrapy.Item):
-    conference_name = scrapy.Field()
+    conferenceName = scrapy.Field()
     date = scrapy.Field()
     location = scrapy.Field()
-    logo_url = scrapy.Field()
-    conference_url = scrapy.Field()
+    logoUrl = scrapy.Field()
+    conferenceUrl = scrapy.Field()
     report = scrapy.Field()
 
 class Reports(scrapy.Item):
@@ -18,13 +18,17 @@ class Reports(scrapy.Item):
     description = scrapy.Field()
     complexity = scrapy.Field()
     tags = scrapy.Field()
-    langugge = scrapy.Field()
+    language = scrapy.Field()
     sources = scrapy.Field()
     authors = scrapy.Field()
 
 class Speakers(scrapy.Item):
-    speaker_name = scrapy.Field()
+    speakerName = scrapy.Field()
     avatar = scrapy.Field()
     bio = scrapy.Field()
-    company = scrapy.Field()
+    speakerContacts = scrapy.Field()
 
+class ContactInfo(scrapy.Item):
+    company = scrapy.Field()
+    twitter = scrapy.Field()
+    email = scrapy.Field()
